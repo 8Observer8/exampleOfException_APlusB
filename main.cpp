@@ -5,6 +5,7 @@
  * Created on May 29, 2013, 9:24 AM
  */
 
+#include <stdlib.h>
 #include <iostream>
 #include "APlusB.h"
 
@@ -17,8 +18,9 @@ int main(int argc, char** argv) {
 
     try {
         sum = apb.aplusb(a, b);
-    }    catch (const std::out_of_range& e) {
+    } catch (const std::out_of_range& e) {
         std::cerr << "Out of Range error: " << e.what() << '\n';
+        exit(1);
     }
 
     std::cout << "a = " << a << std::endl;
@@ -31,8 +33,9 @@ int main(int argc, char** argv) {
 
     try {
         sum = apb.aplusb(a, b);
-    }    catch (const std::out_of_range& e) {
+    } catch (const std::out_of_range& e) {
         std::cerr << "Out of Range error: " << e.what() << '\n';
+        exit(1);
     }
 
     std::cout << std::endl;
@@ -46,8 +49,9 @@ int main(int argc, char** argv) {
 
     try {
         sum = apb.aplusb(a, b);
-    }    catch (const std::out_of_range& e) {
+    } catch (const std::out_of_range& e) {
         std::cerr << "Out of Range error: " << e.what() << '\n';
+        exit(1);
     }
 
     std::cout << std::endl;
@@ -57,4 +61,3 @@ int main(int argc, char** argv) {
 
     return 0;
 }
-
